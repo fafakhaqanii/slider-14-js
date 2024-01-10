@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .item {
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div><button>click me</button></div>
+    <div style="display: flex; overflow: hidden" class="container">
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/237/600/400" alt="" />
+      </div>
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/1025/600/400" alt="" />
+      </div>
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/1003/600/400" alt="" />
+      </div>
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/318/600/400" alt="" />
+      </div>
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/1040/600/400" alt="" />
+      </div>
+      <div style="width: 600px" class="item">
+        <img src="https://picsum.photos/id/401/600/400" alt="" />
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      let firsPos = 0;
+      $("button").click(function () {
+        firsPos -= 50;
+        $(".item").css("transform", `translateX(${firsPos}%)`);
+      });
+    </script>
+  </body>
+</html>
